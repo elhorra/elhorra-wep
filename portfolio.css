@@ -1,0 +1,347 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter',sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+}
+:root{
+    --bg-color:#191919;
+    --secont-bg-color:#101010;
+    --main-color:#e9204f;
+    --text-color:#fff;
+    --second-color:#e4e4e4;
+    --other-color:#c6c9d8bf;
+    --h1-font:7rem;
+    --h2-font:3,5rem;
+    --p-font:1,1rem;
+
+
+}
+body{
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+header{
+    position: fixed;
+    top:0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 11%;
+    border-bottom: 1px solid transparent;
+    transition: all ease.50s;
+    border: 3px solid #000;
+    background-color: #000;
+
+}
+.logo{
+    width: 100;
+    height: auto;
+}
+.navlist{
+    display: flex;
+    
+}
+.navlist a{
+    color: var(--second-color);
+    font-size: var(--p-font);
+    font-style: 600;
+    margin: 0 40px;
+    transition: all ease .40s;
+    border: 2px double white;
+}
+.navlist a:hover{
+    color: var(--main-color);
+    
+}
+#menu-icon{
+    font-size: 42px;
+    color:var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+section{
+    padding: 120px 19% 100px;
+}
+.home{
+    
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: url(../../Pictures/istockphoto-1362365251-612x612.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.hero-text h3{
+    color: var(--second-color);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    word-spacing: 10px;
+  
+}
+.hero-text h1{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h1-font);
+    color: var(--text-color);
+    font-weight: 100;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.hero-text h4{
+    color: var(--second-color);
+    font-size: 25px;
+    font-weight: 600;
+    word-spacing: 15px;
+    margin-bottom: 3,5rem;
+}
+.btn{
+    display: inline-block;
+    padding: 16px 45px;
+    background: blue;
+color:var(--text-color);
+font-size: var(--p-font);
+font-weight: 600;
+border: 2px solid white;
+transition: all ease.50s;
+}
+.btn:hover{
+    transform: translateX(5px);
+    background: transparent;
+    border: 2px solid var(--main-color);
+
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(200px , auto));
+    align-items: center;
+    gap: 4rem;
+}
+.skills-img img{
+    width: 100%;
+    height: auto;
+}
+.skills-text h2{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h2-font); 
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.skills-text h5{
+    font-size: 22px;
+margin-bottom: 1.4;
+}
+.contact{
+    padding: 80px 19% 70px;
+    background: var(--secont-bg-color);
+    display: flex;
+    align-items: center;
+   flex-direction: column;
+    text-align: center;
+    
+}
+.contact h3{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.contact i{
+    height: 40px;
+    width: 40px;
+    background: blue;
+    color: var(--text-color);
+    border: 2px solid white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 50%;
+   margin: 0% 9px;
+   transition: all ease .50s;
+   flex-direction:row-reverse;
+
+}
+.contact i:hover{
+    transform: translateY(-5px);
+    background: transparent;
+    border: 2px solid white;
+}
+
+/* تنسيق الحاوية الرئيسية لتوزيع المحتوى أفقيًا */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* تنسيق إدارة المهام */
+.task-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%; /* تعديل العرض ليكون 30% */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #1e90ff; /* اللون الأزرق */
+    min-width: 250px; /* تحديد الحد الأدنى من العرض للحاوية */
+    flex-grow: 1; /* جعلها قابلة للنمو لتأخذ المساحة المتاحة */
+}
+
+.task-container h1 {
+    text-align: center;
+    color: #1e90ff; /* اللون الأزرق */
+    font-size: 24px;
+    margin-bottom: 20px; /* إضافة مساحة أسفل العنوان */
+}
+
+/* تنسيق حقل الإدخال في إدارة المهام */
+#taskInput {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #1e90ff; /* اللون الأزرق */
+    border-radius: 4px;
+    font-size: 16px;
+    color: #1e90ff; /* اللون الأزرق */
+}
+
+/* تنسيق زر إضافة مهمة */
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+button {
+    background-color: #1e90ff; /* اللون الأزرق */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1c86ee; /* لون أزرق داكن عند التمرير */
+}
+
+/* تنسيق قائمة المهام */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li {
+    background-color: #f0f8ff; /* اللون الأزرق الفاتح */
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #1e90ff; /* اللون الأزرق */
+}
+
+/* تنسيق المدونة */
+.blog-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%; /* تعديل العرض ليكون 30% */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #1e90ff; /* اللون الأزرق */
+    min-width: 250px; /* تحديد الحد الأدنى من العرض للحاوية */
+    flex-grow: 1; /* جعلها قابلة للنمو لتأخذ المساحة المتاحة */
+}
+
+.blog-container h1 {
+    text-align: center;
+    color: #1e90ff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* تنسيق حقل الإدخال للمقال الجديد */
+.new-post textarea {
+    width: 100%; /* تعديل ليأخذ كامل العرض */
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #1e90ff; /* اللون الأزرق */
+    border-radius: 4px;
+    font-size: 16px;
+    color: #1e90ff; /* اللون الأزرق */
+    resize: none;
+}
+
+/* تنسيق زر نشر المقال */
+.new-post button {
+    background-color: #1e90ff; /* اللون الأزرق */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.6;
+    margin-top: 10px;
+}
+
+/* تنسيق لعبة X و O */
+.game-container {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%; /* تعديل العرض ليكون 30% */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #1e90ff; /* اللون الأزرق */
+    min-width: 250px; /* تحديد الحد الأدنى من العرض للحاوية */
+    flex-grow: 1; /* جعلها قابلة للنمو لتأخذ المساحة المتاحة */
+}
+
+.game-container h1 {
+    text-align: center;
+    color: #1e90ff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* تنسيق الشبكة (grid) في لعبة X و O */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #1e90ff; /* اللون الأزرق */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
